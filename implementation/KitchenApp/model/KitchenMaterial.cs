@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal class KitchenMaterial : Material
+    public class KitchenMaterial : Material
     {
         public KitchenMaterial(String name, int quantity, Image sprite) : base(name, quantity)
         {

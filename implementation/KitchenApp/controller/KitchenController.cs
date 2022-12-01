@@ -9,7 +9,7 @@ using KitchenApp.contract;
 
 namespace KitchenApp.controller
 {
-    internal class KitchenController
+    public class KitchenController
     {
         private static int TIME_SCALE = 1000;
 
@@ -70,6 +70,7 @@ namespace KitchenApp.controller
             Application.Run(view.controlForm);
             model.AddObserver(view);
 
+
             for (int i = 0; i < model.chefs.Length; i++)
             {
                 Thread ChefThread = new(new ThreadStart(ChefTask));
@@ -103,6 +104,9 @@ namespace KitchenApp.controller
                 washerThread.Start();
             }
 
+            Thread monitorThread = new(new ThreadStart(() => { Application.Run(view.monitorForm); }));
+            monitorThread.Start();
+
             Application.Run(view.kitchenForm);
         }
 
@@ -117,7 +121,10 @@ namespace KitchenApp.controller
                 orderQueueMre.Reset();
                 notifyOrderQueueMut.ReleaseMutex();
                 Console.WriteLine(Thread.CurrentThread.Name + ": Order received.");
+                model.NotifyEvent(Thread.CurrentThread.Name + ": Order received.");
+
                 Console.WriteLine(Thread.CurrentThread.Name + ": Sending to Part Chef");
+                model.NotifyEmployeeNotAvailable("chef");
                 //Changing sprite
                 int threadNumber = int.Parse((Thread.CurrentThread.Name[Thread.CurrentThread.Name.Length - 1]) + "");
                 int chefPosition = threadNumber - 1;
@@ -139,7 +146,7 @@ namespace KitchenApp.controller
 
                 orderQueueMut.ReleaseMutex();
 
-    
+                model.NotifyEmployeeAvailable("chef");
 
                 //Changing sprite
                 model.chefs[chefPosition].currentSprite = model.chefs[chefPosition].GetSprite("waiting");
@@ -162,6 +169,7 @@ namespace KitchenApp.controller
 
 
                 Console.WriteLine(Thread.CurrentThread.Name + ": Recipe received.");
+                model.NotifyEvent(Thread.CurrentThread.Name + ": Recipe received.");
 
                 recipeQueueMut.WaitOne();
                 Recipe recipe = recipeQueue.First<Recipe>();
@@ -195,6 +203,8 @@ namespace KitchenApp.controller
                     while(task.material.quantity == 0)
                     {
                         Console.WriteLine(Thread.CurrentThread.Name + ": Waiting for " + task.material.name);
+                        model.NotifyEvent(Thread.CurrentThread.Name + ": Waiting for " + task.material.name);
+
                         Thread.Sleep(2000);
 
                     }
@@ -208,9 +218,14 @@ namespace KitchenApp.controller
                     //}
 
                     task.material.quantity--;
+                    model.NotifyMaterialAvailableChanged(task.material.name);
                     Console.WriteLine(Thread.CurrentThread.Name + ": Doing task '" + task.name + "' ...");
+                    model.NotifyEvent(Thread.CurrentThread.Name + ": Doing task '" + task.name + "' ...");
+
                     Thread.Sleep(task.duration * TIME_SCALE);
                     Console.WriteLine(Thread.CurrentThread.Name + ": Task '" + task.name + "' done.");
+                    model.NotifyEvent(Thread.CurrentThread.Name + ": Task '" + task.name + "' done.");
+
                     //task.material = (task.material.Item1, task.material.Item2 + 1);
                     materialWashQueueMut.WaitOne();
                     if (task.material.washable)
@@ -218,12 +233,17 @@ namespace KitchenApp.controller
                         materialWashQueue.Enqueue(task.material);
                         materialWashQueueMre.Set();
                     }
-                    else
+                    else 
+                    { 
                         task.material.quantity++;
+                        model.NotifyMaterialAvailableChanged(task.material.name);
+                    }
                     materialWashQueueMut.ReleaseMutex();
                 }
 
                 Console.WriteLine(Thread.CurrentThread.Name + ": Recipe '" + recipe.name + "' done.");
+                model.NotifyEvent(Thread.CurrentThread.Name + ": Recipe '" + recipe.name + "' done.");
+
                 model.partChefs[partChefPosition].currentSprite = model.partChefs[partChefPosition].GetSprite("moving-left");
 
                 for (int i = 0; i <= 4; i++)
@@ -265,6 +285,8 @@ namespace KitchenApp.controller
                     notifyDoneOrderQueueMut.ReleaseMutex();
 
                     Console.WriteLine(Thread.CurrentThread.Name + ": Done order received");
+                    model.NotifyEvent(Thread.CurrentThread.Name + ": Done order received");
+
 
                     int threadNumber = int.Parse((Thread.CurrentThread.Name[Thread.CurrentThread.Name.Length - 1]) + "");
                     int clerkPosition = threadNumber - 1;
@@ -281,6 +303,8 @@ namespace KitchenApp.controller
 
                     doneOrderQueueMut.WaitOne();
                     Console.WriteLine(Thread.CurrentThread.Name + ": Moving'" + doneOrderQueue.First<Order>().recipe.name + "' to comptoir");
+                    model.NotifyEvent(Thread.CurrentThread.Name + ": Moving'" + doneOrderQueue.First<Order>().recipe.name + "' to comptoir");
+
                     doneOrderQueue.Dequeue();
                     doneOrderQueueMut.ReleaseMutex();
 
@@ -331,10 +355,15 @@ namespace KitchenApp.controller
                 materialWashQueueMut.WaitOne();
                 Console.WriteLine(Thread.CurrentThread.Name + ": Material '" + materialWashQueue.First<KitchenMaterial>().name + "' received.");
                 Console.WriteLine(Thread.CurrentThread.Name + ": Washing Material '" + materialWashQueue.First<KitchenMaterial>().name + "' ...");
+                model.NotifyEvent(Thread.CurrentThread.Name + ": Washing Material '" + materialWashQueue.First<KitchenMaterial>().name + "' ...");
+
                 Thread.Sleep(2000);
                 Console.WriteLine(Thread.CurrentThread.Name + ": Washing Material '" + materialWashQueue.First<KitchenMaterial>().name + "' done.");
+                model.NotifyEvent(Thread.CurrentThread.Name + ": Washing Material '" + materialWashQueue.First<KitchenMaterial>().name + "' done.");
+
 
                 materialWashQueue.First<KitchenMaterial>().quantity++;
+                model.NotifyMaterialAvailableChanged(materialWashQueue.First<KitchenMaterial>().name);
 
                 materialWashQueue.Dequeue();
 

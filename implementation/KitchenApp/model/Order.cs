@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal class Order
+    public class Order
     {
         public int tableNumber { get; set; }
         public Recipe recipe { get; set; }

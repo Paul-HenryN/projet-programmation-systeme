@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal abstract class Material : StaticKitchenElement
+    public abstract class Material : StaticKitchenElement
     {
         public String name { get; set; }
         public int quantity { get; set; }

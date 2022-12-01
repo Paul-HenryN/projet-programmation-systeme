@@ -7,7 +7,7 @@ using KitchenApp.contract;
 
 namespace KitchenApp.model
 {
-    internal class PartChef : KitchenEmployee
+    public class PartChef : KitchenEmployee
     {
         public PartChef()
         {

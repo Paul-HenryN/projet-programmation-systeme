@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal abstract class KitchenElement
+    public abstract class KitchenElement
     {
         private Dictionary<String, Image> sprites;
         public Image currentSprite { get; set; }

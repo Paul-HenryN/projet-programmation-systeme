@@ -11,7 +11,7 @@ using KitchenApp.model;
 
 namespace KitchenApp.view
 {
-    internal partial class KitchenForm : Form
+    public partial class KitchenForm : Form
     {
         public KitchenModel model { get; set; }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal interface DAOEntity<T>
+    public interface DAOEntity<T>
     {
         public T find(int id);
 

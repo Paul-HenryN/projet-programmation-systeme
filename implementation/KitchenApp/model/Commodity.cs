@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal class Commodity : Entity
+    public class Commodity : Entity
     {
         public String name { get; set; }    
 

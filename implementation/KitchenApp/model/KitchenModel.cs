@@ -7,34 +7,30 @@ using KitchenApp.contract;
 
 namespace KitchenApp.model
 {
-    internal class KitchenModel
+    public class KitchenModel
     {
-        private List<IObserver> observers;
+        public List<IObserver> observers { get; set; }
 
         public Kitchen kitchen { get; set; }
 
-        public KitchenMaterial cookingFire;
+        public KitchenMaterial cookingFire { get; set; }
 
-        public KitchenMaterial oven;
+        public KitchenMaterial oven { get; set; }
 
-        public KitchenMaterial blender;
+        public KitchenMaterial blender { get; set; }
 
-        public KitchenMaterial pan;
+        public KitchenMaterial pan { get; set; }
 
-        public KitchenMaterial kitchenKnife;
+        public KitchenMaterial kitchenKnife { get; set; }
 
         public Recipe[] recipes { get; set; }
 
-        public int chefNumber = 1;
         public Chef[] chefs { get; set; }
 
-        public int partChefNumber = 2;
         public PartChef[] partChefs { get; set; }
 
-        public int clerkNumber = 5;
         public KitchenClerk[] clerks { get; set; }
 
-        public int washerNumber = 1;
         public Washer[] washers { get; set; }
 
 
@@ -72,12 +68,18 @@ namespace KitchenApp.model
                     }
                 ),
 
-
             };
 
+            SetEmployeeConfig(1, 2, 5, 1);
+            SetMaterialConfig(10, 1, 2, 10, 5);
+
+        }
+
+        public void SetEmployeeConfig(int chefNumber, int partChefNumber, int kitchenClerkNumber, int washerNumber)
+        {
             chefs = new Chef[chefNumber];
             partChefs = new PartChef[partChefNumber];
-            clerks = new KitchenClerk[clerkNumber];
+            clerks = new KitchenClerk[kitchenClerkNumber];
             washers = new Washer[washerNumber];
 
             for (int i = 0; i < chefs.Length; i++)
@@ -86,7 +88,7 @@ namespace KitchenApp.model
                 chefs[i].y = i;
             }
 
-            for(int i = 0; i< partChefs.Length; i++)
+            for (int i = 0; i < partChefs.Length; i++)
             {
                 PartChef partChef = new()
                 {
@@ -95,7 +97,7 @@ namespace KitchenApp.model
                 };
 
 
-                if(i % 2 != 0)
+                if (i % 2 != 0)
                 {
                     partChef.currentSprite = partChef.GetSprite("moving-down");
                 }
@@ -115,6 +117,14 @@ namespace KitchenApp.model
                 washers[i] = new Washer();
             }
         }
+        public void SetMaterialConfig(int cookingFireNumber, int ovenNumber, int blenderNumber, int panNumber, int kitchenKnifeNumber)
+        {
+            cookingFire.quantity = cookingFireNumber;
+            oven.quantity = ovenNumber;
+            blender.quantity = blenderNumber;
+            pan.quantity = panNumber;
+            kitchenKnife.quantity = kitchenKnifeNumber;
+        }
 
         public void AddObserver(IObserver observer)
         {
@@ -126,6 +136,46 @@ namespace KitchenApp.model
             foreach (IObserver observer in observers)
             {
                 observer.UpdateHasMoved(pastX, pastY, newX, newY);
+            }
+        }
+
+        public void NotifyMaterialAvailableChanged(String name)
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.UpdateMaterialAvailableChanged(name);
+            }
+        }
+
+        public void NotifyEmployeeTaskChanged(String name, String taskName)
+        {
+            foreach (IObserver observer in observers)
+            {
+                //observer.UpdateMaterialAvailableChanged(name, taskName);
+            }
+        }        
+
+        public void NotifyEmployeeAvailable(String name)
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.UpdateEmployeeAvailable(name);
+            }
+        }
+
+        public void NotifyEmployeeNotAvailable(String name)
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.UpdateEmployeeNotAvailable(name);
+            }
+        }
+
+        public void NotifyEvent(String eventName)
+        {
+            foreach (IObserver observer in observers)
+            {
+                observer.UpdateEvent(eventName);
             }
         }
 

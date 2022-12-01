@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 
 namespace KitchenApp.model
 {
-    internal class Connection
+    public class Connection
     {
         public SqlConnection conn { get; set; }
 

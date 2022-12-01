@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal class KitchenClerk : KitchenEmployee
+    public class KitchenClerk : KitchenEmployee
     {
         public KitchenClerk()
         {

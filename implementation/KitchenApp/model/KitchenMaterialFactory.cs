@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace KitchenApp.model
 {
-    internal class KitchenMaterialFactory
+    public class KitchenMaterialFactory
     {
         private static KitchenMaterial COOKING_FIRE = new KitchenMaterial("cooking fire", 5, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
-        private static readonly KitchenMaterial PAN = new KitchenMaterial("pan", 10, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
+        private static KitchenMaterial PAN = new KitchenMaterial("pan", 10, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
         private static KitchenMaterial OVEN = new KitchenMaterial("oven", 1, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\oven.png"));
-        private static readonly KitchenMaterial BLENDER = new KitchenMaterial("blender", 1, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
-        private static readonly KitchenMaterial KITCHEN_KNIFE = new KitchenMaterial("kitchen knife", 5, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
+        private static KitchenMaterial BLENDER = new KitchenMaterial("blender", 1, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
+        private static KitchenMaterial KITCHEN_KNIFE = new KitchenMaterial("kitchen knife", 5, Image.FromFile("C:\\Users\\hp\\OneDrive\\Bureau\\KitchenApp\\assets\\kitchen-material\\cooking_fire.png"));
 
 
         public static KitchenMaterial CreateCookingFire()
