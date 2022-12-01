@@ -12,6 +12,7 @@ namespace KitchenApp.model
 
         public Commodity(String name)
         {
+            this.name = name;
         }
     }
 }

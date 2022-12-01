@@ -10,7 +10,6 @@ C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurre
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.AssemblyReference.cache
-C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Form1.resources
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.GenerateResource.cache
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.AssemblyInfoInputs.cache
@@ -22,29 +21,33 @@ C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurre
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.pdb
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.genruntimeconfig.cache
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\ref\KitchenApp.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.AssemblyReference.cache
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Form1.resources
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Properties.Resources.resources
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.GenerateResource.cache
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.AssemblyInfoInputs.cache
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.AssemblyInfo.cs
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.CoreCompileInputs.cache
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\refint\KitchenApp.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.pdb
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.exe
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.deps.json
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.runtimeconfig.json
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.pdb
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.CopyComplete
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.genruntimeconfig.cache
-C:\Users\Kevin Floride\Desktop\projet c#\implementation\KitchenApp\obj\Debug\net6.0-windows\ref\KitchenApp.dll
+C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.view.KitchenForm.resources
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.exe
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.deps.json
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.runtimeconfig.json
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\KitchenApp.pdb
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.AssemblyReference.cache
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.view.KitchenForm.resources
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.GenerateResource.cache
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.AssemblyInfoInputs.cache
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.AssemblyInfo.cs
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.CoreCompileInputs.cache
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.csproj.CopyComplete
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\refint\KitchenApp.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.pdb
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.genruntimeconfig.cache
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\ref\KitchenApp.dll
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Properties.Resources.resources
+C:\Users\hp\OneDrive\Bureau\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.view.ControlForm.resources
+C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Form1.resources
 C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.Properties.Resources.resources
+C:\Users\hp\OneDrive\Bureau\P-H\informatique\ucac-icam\X3\programmation-concurrente\projet-programmation-systeme\implementation\KitchenApp\obj\Debug\net6.0-windows\KitchenApp.view.ControlForm.resources

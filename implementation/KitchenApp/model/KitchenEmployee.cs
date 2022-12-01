@@ -8,5 +8,9 @@ namespace KitchenApp.model
 {
     internal abstract class KitchenEmployee : MobileKitchenElement
     {
+        public KitchenEmployee()
+        {
+           
+        }
     }
 }
