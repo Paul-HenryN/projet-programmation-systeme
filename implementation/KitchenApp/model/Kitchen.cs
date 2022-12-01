@@ -8,15 +8,25 @@ namespace KitchenApp.model
 {
     internal class Kitchen
     {
-        private KitchenMaterial[][] map;
+        public int cookingFireNumber = 5;
+        public int ovenNumber = 1;
 
-        public KitchenMaterial GetMaterial(int x, int y)
+        public KitchenMaterial[,] map { get; set; }
+
+        public Kitchen()
         {
-            return new KitchenMaterial();
+            map = new KitchenMaterial[11, 10];
+
+            for(int i = 0; i < cookingFireNumber; i++)
+            {
+                map[i, 0] = KitchenMaterialFactory.CreateCookingFire();
+            }
+
+            for (int i = 0; i < ovenNumber; i++)
+            {
+                map[i, 1] = KitchenMaterialFactory.CreateOven();
+            }
         }
 
-        public void SetMaterial(int x, int y, KitchenMaterial material)
-        {
-        }
     }
 }

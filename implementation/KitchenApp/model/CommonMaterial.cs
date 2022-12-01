@@ -8,9 +8,7 @@ namespace KitchenApp.model
 {
     internal class CommonMaterial : Material
     {
-        public String name { get; set; }
-
-        public CommonMaterial(String name)
+        public CommonMaterial(String name, int quantity):base(name, quantity)
         {
         }
     }

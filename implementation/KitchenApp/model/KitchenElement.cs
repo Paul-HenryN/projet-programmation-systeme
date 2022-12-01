@@ -8,6 +8,22 @@ namespace KitchenApp.model
 {
     internal abstract class KitchenElement
     {
-        public Image sprite { get; set; }
+        private Dictionary<String, Image> sprites;
+        public Image currentSprite { get; set; }
+
+        public KitchenElement()
+        {
+            sprites = new Dictionary<String, Image>();
+        }
+
+        public Image GetSprite(String key)
+        {
+            return sprites[key];
+        }
+
+        public void SetSprite(String key, Image sprite)
+        {
+            sprites[key] = sprite;
+        }
     }
 }
