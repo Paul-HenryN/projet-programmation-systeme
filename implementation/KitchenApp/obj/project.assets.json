@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kevin Floride\\.nuget\\packages\\": {}
+    "C:\\Users\\JOD\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kevin Floride\\Desktop\\projet c#\\implementation\\KitchenApp\\KitchenApp.csproj",
+      "projectUniqueName": "C:\\Users\\JOD\\Desktop\\projet-programmation-systeme\\implementation\\KitchenApp\\KitchenApp.csproj",
       "projectName": "KitchenApp",
-      "projectPath": "C:\\Users\\Kevin Floride\\Desktop\\projet c#\\implementation\\KitchenApp\\KitchenApp.csproj",
-      "packagesPath": "C:\\Users\\Kevin Floride\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kevin Floride\\Desktop\\projet c#\\implementation\\KitchenApp\\obj\\",
+      "projectPath": "C:\\Users\\JOD\\Desktop\\projet-programmation-systeme\\implementation\\KitchenApp\\KitchenApp.csproj",
+      "packagesPath": "C:\\Users\\JOD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JOD\\Desktop\\projet-programmation-systeme\\implementation\\KitchenApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Kevin Floride\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JOD\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
