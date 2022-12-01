@@ -1,7 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\implementation",
+    "\\implementation\\DiningRoomApp",
+    "\\implementation\\DiningRoomApp\\controller",
+    "\\implementation\\DiningRoomApp\\model",
+    "\\implementation\\KitchenApp",
+    "\\implementation\\KitchenApp\\controller",
+    "\\implementation\\KitchenApp\\model"
   ],
-  "SelectedNode": "\\KitchenApp.sln",
+  "SelectedNode": "\\implementation\\KitchenApp\\controller\\KitchenController.cs",
   "PreviewInSolutionExplorer": false
 }

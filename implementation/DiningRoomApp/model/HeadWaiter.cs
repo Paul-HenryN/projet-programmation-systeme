@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiningRoomApp.model
 {
-    internal abstract class HeadWaiter : DiningRoomEmployee
+    internal class HeadWaiter : DiningRoomEmployee
     {
         
     }
